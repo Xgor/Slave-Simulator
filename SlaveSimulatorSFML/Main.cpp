@@ -21,18 +21,19 @@ int main()
 	Button exitButton("Exit",840,700);
 	Textbox testbox;
 	sf::Clock time;
-
+	sf::Vector2i mousePos;
 	while (window->isOpen())
 	{
 		sf::Event event;
 
-		sf::Vector2i mousePos = sf::Mouse::getPosition(*window);
+		
 		
 		while (testbox.Update(time.restart().asSeconds()))
 		{
 			while (window->pollEvent(event))
 			{
-				if (event.type == sf::Event::Closed || sf::Keyboard::isKeyPressed(sf::Keyboard::Escape) || exitButton.ButtonFunction(mousePos))
+				mousePos = sf::Mouse::getPosition(*window);
+				if (exitButton.ButtonFunction(mousePos) || event.type == sf::Event::Closed || sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
 				{
 					window->close();
 					return 0;
@@ -53,7 +54,8 @@ int main()
 		{
 			while (window->pollEvent(event))
 			{
-				if (event.type == sf::Event::Closed || sf::Keyboard::isKeyPressed(sf::Keyboard::Escape) || exitButton.ButtonFunction(mousePos))
+				mousePos = sf::Mouse::getPosition(*window);
+				if (exitButton.ButtonFunction(mousePos) || event.type == sf::Event::Closed || sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
 				{
 					window->close();
 					return 0;
@@ -68,6 +70,7 @@ int main()
 			window->display();
 
 		}
+		testbox.changeText("Program gonna loop now soo that's it folks!");
 	}
 
 	return 0;
