@@ -1,0 +1,16 @@
+﻿Build started 2014-11-30 12:16:15.
+     1>Project "C:\Users\Fredrik\Documents\Visual Studio 2013\Projects\Slave-Simulator\SlaveSimulatorSFML\SlaveSimulatorSFML.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Fredrik\Documents\Visual Studio 2013\Projects\Slave-Simulator\Release Static\SlaveSimulatorSFML.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\SFML\SFML-2.1\extlibs\libs-msvc\x86" /LIBPATH:"C:\SFML\SFML-2.1\Staitc Libs\Release" "sfml-graphics.lib" "sfml-window.lib" "sfml-system.lib" "sfml-main.lib" opengl32.lib glu32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Fredrik\Documents\Visual Studio 2013\Projects\Slave-Simulator\Release Static\SlaveSimulatorSFML.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Fredrik\Documents\Visual Studio 2013\Projects\Slave-Simulator\Release Static\SlaveSimulatorSFML.lib" /MACHINE:X86 /SAFESEH "Release Static\Button.obj"
+         "Release Static\Game.obj"
+         "Release Static\Main.obj"
+         "Release Static\Scenario.obj"
+         "Release Static\Slave.obj"
+         "Release Static\Textbox.obj"
+         "Release Static\VariableManager.obj"
+     1>LINK : fatal error LNK1181: cannot open input file 'sfml-graphics.lib'
+     1>Done Building Project "C:\Users\Fredrik\Documents\Visual Studio 2013\Projects\Slave-Simulator\SlaveSimulatorSFML\SlaveSimulatorSFML.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.05

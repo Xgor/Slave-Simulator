@@ -1,0 +1,34 @@
+﻿Build started 2014-11-30 23:18:16.
+     1>Project "C:\Users\Fredrik\Documents\Visual Studio 2013\Projects\Slave-Simulator\SlaveSimulatorSFML\SlaveSimulatorSFML.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\SFML\SFML-2.1\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D SFML_STATIC /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug Static\\" /Fd"Debug Static\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Game.cpp Main.cpp Scenario.cpp TestScenario.cpp Textbox.cpp
+         Textbox.cpp
+     1>c:\users\fredrik\documents\visual studio 2013\projects\slave-simulator\slavesimulatorsfml\textbox.h(25): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\fredrik\documents\visual studio 2013\projects\slave-simulator\slavesimulatorsfml\textbox.h(38): warning C4091: 'static ' : ignored on left of 'Textbox' when no variable is declared
+         Generating Code...
+         Compiling...
+         Scenario.cpp
+     1>c:\users\fredrik\documents\visual studio 2013\projects\slave-simulator\slavesimulatorsfml\textbox.h(25): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\fredrik\documents\visual studio 2013\projects\slave-simulator\slavesimulatorsfml\textbox.h(38): warning C4091: 'static ' : ignored on left of 'Textbox' when no variable is declared
+     1>c:\users\fredrik\documents\visual studio 2013\projects\slave-simulator\slavesimulatorsfml\game.h(28): warning C4091: 'static ' : ignored on left of 'Game' when no variable is declared
+         Generating Code...
+         Skipping... (no relevant changes detected)
+         TestScenario.cpp
+         Main.cpp
+         Game.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Fredrik\Documents\Visual Studio 2013\Projects\Slave-Simulator\Debug Static\SlaveSimulatorSFML.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\SFML\SFML-2.1\extlibs\libs-msvc\x86" /LIBPATH:"C:\SFML\SFML-2.1\Staitc Libs\Debug" "sfml-graphics-s-d.lib" "sfml-window-s-d.lib" "sfml-system-s-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Fredrik\Documents\Visual Studio 2013\Projects\Slave-Simulator\Debug Static\SlaveSimulatorSFML.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Fredrik\Documents\Visual Studio 2013\Projects\Slave-Simulator\Debug Static\SlaveSimulatorSFML.lib" /MACHINE:X86 "Debug Static\BackgroundManager.obj"
+         "Debug Static\Button.obj"
+         "Debug Static\Game.obj"
+         "Debug Static\Main.obj"
+         "Debug Static\Scenario.obj"
+         "Debug Static\Slave.obj"
+         "Debug Static\TestScenario.obj"
+         "Debug Static\Textbox.obj"
+         "Debug Static\VariableManager.obj"
+         SlaveSimulatorSFML.vcxproj -> C:\Users\Fredrik\Documents\Visual Studio 2013\Projects\Slave-Simulator\Debug Static\SlaveSimulatorSFML.exe
+     1>Done Building Project "C:\Users\Fredrik\Documents\Visual Studio 2013\Projects\Slave-Simulator\SlaveSimulatorSFML\SlaveSimulatorSFML.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.36

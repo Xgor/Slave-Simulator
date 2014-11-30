@@ -11,14 +11,27 @@
 #include <SFML/Graphics.hpp>
 #include "Button.h"
 #include "Textbox.h"
+#include "Game.h"
+#include "TestScenario.h"
 
 int main()
 {
+//	TestScenario test;
+
+//	test.scenarioEvents();
+
 	sf::RenderWindow* window = new sf::RenderWindow(sf::VideoMode(1980, 1080), "SFML works!", sf::Style::Fullscreen);
+//	sf::RenderWindow* window = new sf::RenderWindow(sf::VideoMode(1000, 580), "SFML works!");
+
+//	Game game;
+
+//	game.GameLoop();
+	
+	
 	sf::CircleShape shape(100.f);
 	shape.setFillColor(sf::Color::Green);
 
-	Button exitButton("Exit",840,700);
+	Button exitButton("Exit", 840, 700);
 	Textbox testbox;
 	sf::Clock time;
 	sf::Vector2i mousePos;
@@ -48,7 +61,7 @@ int main()
 			window->display();
 
 		}
-		testbox.changeText("Well it worked well \nThat's really nice to know :) \n едцедцедц");
+		testbox.ChangeText("Well it worked well \nThat's really nice to know :) \n едцедцедц");
 
 		while (testbox.Update(time.restart().asSeconds()))
 		{
@@ -70,8 +83,9 @@ int main()
 			window->display();
 
 		}
-		testbox.changeText("Program gonna loop now soo that's it folks!");
+		testbox.ChangeText("Program gonna loop now soo that's it folks!");
 	}
-
+	
+//	game.Delete();
 	return 0;
 }

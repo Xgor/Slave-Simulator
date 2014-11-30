@@ -3,6 +3,7 @@
 
 Button::Button(std::string text, float xPos, float yPos)
 {
+//	m_text = new sf::Text;
 
 	m_font.loadFromFile("content/fonts/tahoma.ttf");
 
@@ -17,7 +18,7 @@ Button::Button(std::string text, float xPos, float yPos)
 	m_text.setString(text);
 
 
-
+	
 	m_textRect = m_shape.getGlobalBounds();
 	m_text.setPosition(m_textRect.left + m_textRect.width / 2.0f,
 		m_textRect.top + m_textRect.height / 2.0f);
@@ -28,7 +29,7 @@ Button::Button(std::string text, float xPos, float yPos)
 
 	m_text.setCharacterSize(16);
 	m_text.setColor(sf::Color::Black);
-
+	
 
 
 }

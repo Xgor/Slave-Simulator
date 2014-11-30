@@ -3,11 +3,16 @@
 
 Textbox::Textbox()
 {
-
+	m_fullText = "NanT434343ext";
 	m_font.loadFromFile("content/fonts/tahoma.ttf");
 
-	m_text.setFont(m_font);
-	m_text.setPosition(100, 800);
+	m_drawnText.setFont(m_font);
+	m_drawnText.setPosition(100, 800);
+
+	m_nextLetter.setFont(m_font);
+//	m_nextLetter.setPosition(100, 800);
+
+//	m_drawnText.getGlobalBounds().width;
 
 	m_textboxTexture.loadFromFile("content/textures/TestTextbox.png");
 	m_textboxSprite.setTexture(m_textboxTexture);
@@ -23,7 +28,8 @@ Textbox::~Textbox()
 void Textbox::Draw(sf::RenderWindow * window)
 {
 	window->draw(m_textboxSprite);
-	window->draw(m_text);
+	window->draw(m_drawnText);
+	window->draw(m_nextLetter);
 }
 
 bool Textbox::Update(float deltaTime)
@@ -31,19 +37,20 @@ bool Textbox::Update(float deltaTime)
 	m_textBoxTimer += deltaTime;
 
 
-	if (m_drawnText != m_fullText)
+	if (m_drawnText.getString() != m_fullText)
 	{
-		m_drawnText = "";
+		std::string m_tempString = "";
 		for (int i = 0; i < m_textBoxTimer / m_textSpeed; i++)
 		{
-			m_drawnText += m_fullText[i];
+			m_tempString += m_fullText[i];
+
 		}
 
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
 		{
 			if (!spaceDown)
 			{
-				m_drawnText = m_fullText;
+				m_tempString = m_fullText;
 			}
 			spaceDown = true;
 		}
@@ -51,7 +58,14 @@ bool Textbox::Update(float deltaTime)
 		{
 			spaceDown = false;
 		}
-		m_text.setString(m_drawnText);
+		m_drawnText.setString(m_tempString);
+
+//		m_nextLetter.setString( m_fullText[2] );
+
+		sf::FloatRect tempRect = m_drawnText.getGlobalBounds();
+	//	m_nextLetter.setColor(sf::Color(255, 255, 255, fmod(m_textBoxTimer,m_textSpeed) * (m_textSpeed / 255)));
+//		m_nextLetter.setPosition(tempRect.left + tempRect.width, tempRect.top + tempRect.height);
+
 	}
 	else
 	{
@@ -60,6 +74,7 @@ bool Textbox::Update(float deltaTime)
 			if (!spaceDown)
 			{
 				spaceDown = true;
+				m_inText = false;
 				return false;
 			}
 			spaceDown = true;
@@ -75,10 +90,10 @@ bool Textbox::Update(float deltaTime)
 
 
 
-void Textbox::changeText(std::string text)
+void Textbox::ChangeText(std::string text)
 {
-	m_drawnText = "";
+	m_drawnText.setString("");
 	m_fullText = text;
 	m_textBoxTimer = 0;
-
+	m_inText = true;
 }
